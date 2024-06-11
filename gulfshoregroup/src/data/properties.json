@@ -1,0 +1,16 @@
+
+[
+    {
+      "id": 1,
+      "price": "$500,000",
+      "address": "123 Main St, Anytown, USA",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "sqft": 2000,
+      "image": "https://via.placeholder.com/300x200",
+  	"lat": 27.9944024,
+	"lng": -81.7602544
+    }
+
+  ]
+  
