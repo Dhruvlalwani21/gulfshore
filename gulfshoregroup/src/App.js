@@ -9,6 +9,7 @@ import Footer from "./pages/components/Footer";
 import Home from "./pages/Home";
 import Cities from "./pages/Cities";
 import MapSearchPage from "./pages/MapSearch";
+import PropertyDetail from "./pages/PropertyDetail";
 // import Rent from './pages/Rent';
 // import Sell from './pages/Sell';
 // import Mortgage from './pages/Mortgage';
@@ -18,11 +19,15 @@ const App = () => {
 	return (
 		<Router>
 			<div>
-				<Navbar />
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/cities" element={<Cities />} />
 					<Route path="/map-search" element={<MapSearchPage />} />
+					<Route
+						path="/property-details/pid/:id"
+						element={<PropertyDetail />}
+					/>
+
 					{/* <Route path="/buy" element={<Buy />} />
 					<Route path="/rent" element={<Rent />} />
 					<Route path="/sell" element={<Sell />} />

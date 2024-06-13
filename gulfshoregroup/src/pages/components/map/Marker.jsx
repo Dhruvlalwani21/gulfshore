@@ -23,14 +23,20 @@ function MarkerItem({ item, handleMarkerClick }) {
 		<div>
 			{selected === item._id && (
 				<OverlayView
-					position={{ lat: item.lat, lng: item.lng }}
+					position={{
+						lat: parseFloat(item.Latitude),
+						lng: parseFloat(item.Longitude),
+					}}
 					mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}>
 					<PropertyCard property={item} />
 				</OverlayView>
 			)}
 			<MarkerF
 				key={item.id}
-				position={{ lat: item.lat, lng: item.lng }}
+				position={{
+					lat: parseFloat(item.Latitude),
+					lng: parseFloat(item.Longitude),
+				}}
 				onClick={() => showBanner()}
 			/>
 		</div>

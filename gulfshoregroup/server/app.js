@@ -3,7 +3,7 @@ const mysql = require("mysql");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
-
+const propertyRoutes = require("./routes/properties/properties.routes");
 const app = express();
 const port = 5000;
 
@@ -69,6 +69,8 @@ async function fetchData() {
 		});
 	});
 }
+// Routes
+app.use("/api", propertyRoutes);
 
 // Route to trigger data synchronization
 app.get("/sync", async (req, res) => {
